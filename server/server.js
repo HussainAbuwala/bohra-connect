@@ -154,6 +154,6 @@ app.post("/bohras", async (req, res) => {
 
 httpServer.listen(process.env.PORT || port, err=> {
    if(err) console.log(err)
-   console.log('Server running on Port ', port)
+   console.log('Server running on Port ', process.env.port ? process.env.port : port)
 })
 

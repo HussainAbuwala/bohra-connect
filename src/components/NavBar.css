@@ -36,3 +36,25 @@ opacity: 0.8;
       color: #818589;
     }
   }
+
+.dropdown-container{
+  display: none;
+  margin-left: 5px;
+}
+
+.menu-nav-link{
+  text-decoration: none;
+  color: #36454F	;
+}
+
+/* Styles for typical phone screen sizes */
+@media screen and (max-width: 767px) {
+  
+    .dropdown-container{
+      display: block;
+    }
+    .responsive-anchor-container{
+      display: none;
+    }
+  
+}
