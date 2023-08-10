@@ -1,0 +1,38 @@
+.nav-bar-container{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+  z-index: 1000; 
+opacity: 0.8;
+}
+
+.navbar-title{
+    font-family: 'Playfair Display', serif;
+    color: #FFE79B;
+}
+
+.anchor-container{
+    display: flex;
+    margin-left: 20px;
+}
+.navbar-label{
+    margin-right: 10px;
+}
+
+.flashing-text {
+    animation: flash 4s infinite;
+  }
+
+  @keyframes flash {
+    0%, 100% {
+      background-color: #818589; /* Start and end color */
+      color: white;
+    }
+    50% {
+      background-color: white; /* Midway color */
+      color: #818589;
+    }
+  }

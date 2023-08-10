@@ -1,0 +1,34 @@
+.map-container {
+    height: 100vh;
+    border-radius: 5px;
+}
+
+.location-div{
+    text-align: center;
+}
+
+.popup-content {
+    text-align: center;
+  }
+
+.user-image {
+    width: 60px; /* Adjust the size as needed */
+    height: 60px; /* Adjust the size as needed */
+    border-radius: 50%; /* Make the image round */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+}
+
+li{
+    list-style: none;
+}
+
+.all-container{
+    margin: 0 auto;
+}
+
+.canvas-container{
+  width: 50%;
+  height: 600px;
+  margin: 0 auto;
+}
+

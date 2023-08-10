@@ -1,0 +1,20 @@
+.location-map-container{
+    width: 400px;
+    height: 400px;
+}
+
+.location-div{
+    margin-left: 5px;
+}
+
+.content-label {
+    display: flex;
+    justify-content: space-between; /* Pushes items to the sides */
+    align-items: center;
+}
+
+.label-text{
+    text-decoration: underline;
+    flex: 2;
+    font-style: italic;
+}

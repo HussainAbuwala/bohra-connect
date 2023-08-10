@@ -1,0 +1,19 @@
+.about-container{
+    font-size: 0.8em;
+    width: 500px;
+    display: flex;
+    margin: auto;
+    padding: 10px;
+    justify-content: center;
+    flex-direction: column;
+    text-align: justify;
+}
+
+.about-container > span {
+    font-family: 'Roboto Mono', monospace;
+}
+.about-container > h4{
+    font-size: 1.4em;
+    margin-top: 10px;
+    text-align: center;
+}
