@@ -33,7 +33,7 @@ const app = express();
 const port = 5000;
 const usersCollection = collection(db, "users");
 const httpServer = createServer(app)
-const io = new Server(httpServer, {cors: {origin: '*'}})
+const io = new Server(httpServer, {cors: {origin: process.env.CLIENT_URL}})
 
 io.on('connection', (socket) => {
    console.log('Server: Connection established ', socket.id)
@@ -45,7 +45,10 @@ io.on('connection', (socket) => {
 
 })
 
-app.use(cors());
+app.use(cors({
+   origin: process.env.CLIENT_URL, // Replace with your client's domain
+   methods: 'GET,POST,PUT,DELETE',
+}));
 app.use(fileUpload());
 //const storage = multer.memoryStorage();
 //const upload = multer({ storage: storage });
