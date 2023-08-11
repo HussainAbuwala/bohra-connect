@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+# Bohra Connect
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+"Bohra Connect" is an innovative app designed to connect and collaborate among Bohra community members worldwide. It addresses the challenge of finding like-minded individuals within the community when moving to a new country. The app aims to foster unity by transcending geographical boundaries and uses technology to empower connections. Users create profiles using their "Ejammaat ID," name, and location, which are then displayed on a global map as pins. This map allows users to explore and connect with fellow community members nearby, facilitated by social media links on each profile. "Bohra Connect" is not just an app but a movement to strengthen the bonds of the Bohra community globally through technology.
 
-## Available Scripts
+![Screen Recording 2023-08-10 at 10 52 10 PM](https://github.com/HussainAbuwala/bohra-connect/assets/77569166/06c1147e-715e-4c40-a758-38314bb833ed)
 
-In the project directory, you can run:
+# Features
 
-### `npm start`
+1. **Sign Up**: Users can enter their profile information and store it in the database.
+2. **Map Visualization**: Users can view their profile as well as other member profiles in the community by rotating the globe, zooming into the desired location and clicking on the markers.
+3. **Real Time Community Count**: There is a real time count in the navigation bar that gets updated each time a new member joins the community.
+4. **Notification**: When a new user joins the community, everyone using the app gets a notification of this new user and they can click the notification to fly to the marker on the map and view the newly joined members profile.
+5. **Visualization Charts**: Visualization charts in the form of donut and bar charts are shown to visualize community members by profession and by country.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Installation
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Clone the repository: `git clone https://github.com/HussainAbuwala/bohra-connect.git`
+2. Navigate to the project directory: `cd bohra-connect`
+3. Install the client dependencies: `npm install`
+4. Navigate to the server directory: `cd server`
+5. Install the server dependencies: `npm install`
+6. Start the server: `npm run devStart`
+7. Navigate back to the client: `cd ..`
+8. Start the client: `npm start`
+9. Set the appropriate environment variables for both client and server for the database keys, mapbox keys and server url.
 
-### `npm test`
+## Tools & Languages Used
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. HTML5
+2. CSS3
+3. JavaScript
+4. React
+5. Bootstrap
+6. Node.js
+7. Express
+8. Socket.io
+9. react-toastify
+10. Mapbox
+11. Chart.js
+12. Google Firestore
+13. Firebase Storage
+14. GitHub
+15. netlify
+16. Render
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
