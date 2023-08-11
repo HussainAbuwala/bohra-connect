@@ -1,13 +1,16 @@
 .about-container{
     font-size: 0.8em;
-    width: 500px;
+    max-width: 500px;
     display: flex;
     margin: auto;
     padding: 35px;
     justify-content: center;
     flex-direction: column;
     text-align: justify;
+
 }
+
+
 
 .about-container > span {
     font-family: 'Roboto Mono', monospace;

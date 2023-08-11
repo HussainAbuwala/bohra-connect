@@ -12,16 +12,33 @@ export default function Map() {
    const location = useLocation();
    const mapContainer = useRef(null);
    const map = useRef(null);
-
+   const [showScrollButton, setScrollButton] = useState(true);
    const [bohraData, setBohraData] = useState([]);
 
    console.log("PASSED LOCATION", location.state);
    console.log(bohraData);
    console.log(countries[0]);
 
+   const handleScroll = () => {
+      if (window.scrollY < 300) {
+        setScrollButton(true);
+      } else {
+        setScrollButton(false);
+      }
+   };
+
+   useEffect(() => {
+      window.addEventListener('scroll', handleScroll);
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    }, []);
+
    useEffect(() => {
       async function getRecords() {
-         const response = await fetch(`${process.env.REACT_APP_SERVER_URL}/bohras`);
+         const response = await fetch(
+            `${process.env.REACT_APP_SERVER_URL}/bohras`
+         );
 
          if (!response.ok) {
             const message = `An error occured: ${response.statusText}`;
@@ -52,14 +69,11 @@ export default function Map() {
                zoom: 3, // New zoom level
                essential: true, // If true, the transition will interrupt user input
             });
-            addMarkers()
+            addMarkers();
          }, 2000);
+      } else {
+         addMarkers();
       }
-      else{
-         addMarkers()
-      }
-
-      
 
       console.log("hello");
       console.log(bohraData);
@@ -72,9 +86,7 @@ export default function Map() {
       };
    }, [bohraData]);
 
-
-   function addMarkers(){
-
+   function addMarkers() {
       bohraData.forEach((item) => {
          var coordinatesArray = item.lngLat.split(",");
          var longitude = parseFloat(coordinatesArray[0]);
@@ -212,8 +224,15 @@ export default function Map() {
       return donutChart;
    }
 
-   function createWordCloud(){
-      WordCloud(document.getElementById('wordCloud'), { list: [['foo', 12], ['bar', 6]], backgroundColor: "#F7DC6F", minSize: 10,} );
+   function createWordCloud() {
+      WordCloud(document.getElementById("wordCloud"), {
+         list: [
+            ["foo", 12],
+            ["bar", 6],
+         ],
+         backgroundColor: "#F7DC6F",
+         minSize: 10,
+      });
    }
 
    function generateRandomColor() {
@@ -225,14 +244,27 @@ export default function Map() {
       return color;
    }
 
+   const scrollTo = (targetElement) => {
+      targetElement.scrollIntoView({
+         behavior: 'smooth' // Scroll with smooth animation
+      });
+    };
+
    return (
       <div className="all-container">
-         <div ref={mapContainer} className="map-container"></div>
+         <div ref={mapContainer} className="map-container" id="map-container"></div>
          <div className="canvas-container">
             <canvas id="barChart"></canvas>
             <canvas id="donutChart"></canvas>
             <canvas id="wordCloud"></canvas>
          </div>
+            <div className="scroll-down-button">
+               {showScrollButton ? <button className="btn btn-outline-dark btn-sm" onClick={() => scrollTo(document.getElementById('barChart'))}>Scroll Down</button>: 
+            <button className="btn btn-outline-dark btn-sm" onClick={() => scrollTo(document.getElementById('map-container'))}>Scroll Up</button>
+            }
+
+               
+            </div>
       </div>
    );
 }

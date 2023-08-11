@@ -45,6 +45,7 @@ opacity: 0.8;
 .menu-nav-link{
   text-decoration: none;
   color: #36454F	;
+  padding: 5px;
 }
 
 /* Styles for typical phone screen sizes */

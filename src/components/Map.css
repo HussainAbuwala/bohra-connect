@@ -32,3 +32,9 @@ li{
   margin: 0 auto;
 }
 
+.scroll-down-button {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 999;
+}
